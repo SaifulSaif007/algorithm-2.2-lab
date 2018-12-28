@@ -3,6 +3,7 @@
 #define SIZE 20
 #define MAX 1000
 
+
 int cost[SIZE][3], d[SIZE] = {0}, p[SIZE], min_arr[SIZE] = {0};
 int v, e, s;
 
@@ -83,7 +84,7 @@ void relax(int u, int v)
     if (d[v] > d[u] + weight(u, v) )
     {
         d[v] = d[u] + weight(u, v);
-        pi[v] = u;
+        p[v] = u;
     }
 }
 
